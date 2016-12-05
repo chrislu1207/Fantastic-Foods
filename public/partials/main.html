@@ -1,0 +1,21 @@
+<div>
+  <h2>Restaraunts</h2>
+  <div>
+    <table border='true'>
+      <tr>
+        <td>Name</td>
+        <td>Location</td>
+        <td>Price</td>
+      </tr>
+      <tr ng-repeat='food in foodController.data.foods'>
+        <td>{{food.name}}</td>
+        <td>{{food.location}}</td>
+        <td>{{food.price}}</td>
+      </tr>
+    </table>
+  </div>
+  <button ng-click='foodController.getRandomRestaraunt()'>Tell Me Where To Eat</button>
+  <div>
+    <h3>Congratulations! You are going to: {{foodController.randFood.name}}</h3>
+  </div>
+</div>

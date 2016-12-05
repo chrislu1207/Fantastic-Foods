@@ -1,0 +1,20 @@
+{
+  "name": "fantastic-foods-and-where-to-find-them",
+  "version": "1.0.0",
+  "description": "Random restaraunt generator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrislu1207/hrsf50-mvp.git"
+  },
+  "author": "Chris Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrislu1207/hrsf50-mvp/issues"
+  },
+  "homepage": "https://github.com/chrislu1207/hrsf50-mvp#readme"
+}
