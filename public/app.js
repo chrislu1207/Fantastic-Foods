@@ -36,9 +36,20 @@ angular.module('app', ['ngRoute'])
         });
       };
 
+      var removeOne = function(food) {
+        return $http({
+          method: 'POST',
+          url: '/api/rm',
+          data: food
+        }).catch(function(err) {
+          window.alert('URL does not exist');
+        });
+      };
+
       return {
         getAll: getAll,
         addOne: addOne,
+        removeOne: removeOne
       };
     })
 
@@ -66,8 +77,9 @@ angular.module('app', ['ngRoute'])
       Foods.addOne(newFood);
     };
 
-    $scope.removeRestaraunt = function(index) {
+    $scope.removeRestaraunt = function(index, food) {
       $scope.data.foods.splice(index, 1);
+      Foods.removeOne(food);
     };
 
     $scope.geocodeAddress = function(address) {
