@@ -32,7 +32,7 @@ angular.module('app', ['ngRoute'])
           data: food
         })
         .catch(function(err) {
-          window.alert('URL does not exist');
+          console.log(err);
         });
       };
 
@@ -42,7 +42,7 @@ angular.module('app', ['ngRoute'])
           url: '/api/rm',
           data: food
         }).catch(function(err) {
-          window.alert('URL does not exist');
+          console.log(err);
         });
       };
 
