@@ -14,8 +14,32 @@ angular.module('app', ['ngRoute'])
       });
   })
 
-  .factory('foodFactory', function() {
+  .factory('foodFactory', function($http) {
+    var getAll = function() {
+      return $http({
+        method: 'GET',
+        url: '/api/foods'
+      })
+      .then(function(res) {
+        return res.data;
+      });
+    };
 
+    var addOne = function(food) {
+      return $http({
+        method: 'POST',
+        url: '/api/foods',
+        data: food
+      })
+      .catch(function(err) {
+        console.log('Something went wrong');
+      });
+    };
+
+    return {
+      getAll: getAll,
+      addOne: addOne
+    };
   })
 
   .controller('foodCtrl', function() {
@@ -42,7 +66,6 @@ angular.module('app', ['ngRoute'])
 
     this.getRandomRestaraunt = function() {
       this.randFood = this.data.foods[Math.floor(Math.random() * this.data.foods.length)];
-      console.log(this.data.foods); 
     };
 
     this.addRestaraunt = function(name, location, price) {
@@ -55,9 +78,6 @@ angular.module('app', ['ngRoute'])
     };
 
   });
-
-
-
 
 
 

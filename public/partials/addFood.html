@@ -2,10 +2,19 @@
   <h2>Add a Restaraunt</h2>
   <div>
     <form ng-submit='foodController.addRestaraunt(newName, newLocation, newPrice)'>
-      Name:<input type="text" name="name" ng-model='newName'><br>
-      Location:<input type="text" name="location" ng-model='newLocation'><br>
-      Price:<input type="text" name="price" ng-model='newPrice'><br>
-      <button>Add to List</button>
+      <div class="form-group">
+        <label for="nameInput">Name</label>
+        <input ng-model='newName' type="text" class="form-control" id="nameInput" placeholder="Enter restaraunt name">
+      </div>
+      <div class="form-group">
+        <label for="locationInput">Location</label>
+        <input ng-model='newLocation' type="text" class="form-control" id="locationInput" placeholder="Enter restaraunt location">
+      </div>
+      <div class="form-group">
+        <label for="priceInput">Price</label>
+        <input ng-model='newPrice' type="text" class="form-control" id="priceInput" placeholder="Enter average price">
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Add a Restaraunt</button>
     </form>
   </div>
 </div>

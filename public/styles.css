@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  background-color: skyblue;
+}
+
+h1.appTitle {
+  font-family: 'Indie Flower', cursive;
+  font-size: 70px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Indie Flower', cursive;
+}
+
+nav {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 20px;
+}
+
+.content {
+  font-size: 16px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#map {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  margin-left: 50px;
+}
