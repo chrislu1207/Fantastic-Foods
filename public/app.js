@@ -1,3 +1,17 @@
+var map;
+var initMap = function($scope) {
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16
+  });
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      map.setCenter(initialLocation);
+    });
+  }
+};
+
 angular.module('app', ['ngRoute'])
   .config(function($routeProvider) {
     $routeProvider
@@ -75,6 +89,10 @@ angular.module('app', ['ngRoute'])
         price: price
       };
       this.data.foods.push(newFood); 
+    };
+
+    this.removeRestaraunt = function(index) {
+      this.data.foods.splice(index, 1);
     };
 
   });

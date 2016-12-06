@@ -7,6 +7,7 @@
           <th>Name</th>
           <th>Location</th>
           <th>Price</th>
+          <th>Remove</th>
         </tr>
       </thead>
       <tbody>
@@ -14,6 +15,7 @@
           <td>{{food.name}}</td>
           <td>{{food.location}}</td>
           <td>{{food.price}}</td>
+          <td width='40px'><button class='btn btn-danger' ng-click='foodController.removeRestaraunt(foodController.data.foods.indexOf(food))'>Remove</button></td>
         </tr>
       </tbody>
     </table>
