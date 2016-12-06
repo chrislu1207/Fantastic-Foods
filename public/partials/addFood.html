@@ -1,7 +1,7 @@
 <div>
   <h2>Add a Restaraunt</h2>
   <div>
-    <form ng-submit='foodController.addRestaraunt(newName, newLocation, newPrice); foodController.geocodeAddress(newLocation);'>
+    <form ng-submit='addRestaraunt(newName, newLocation, newPrice); geocodeAddress(newLocation);'>
       <div class="form-group">
         <label for="nameInput">Name</label>
         <input ng-model='newName' type="text" class="form-control" id="nameInput" placeholder="Enter restaraunt name">

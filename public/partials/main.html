@@ -11,17 +11,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat='food in foodController.data.foods'>
+        <tr ng-repeat='food in data.foods'>
           <td>{{food.name}}</td>
           <td>{{food.location}}</td>
           <td>{{food.price}}</td>
-          <td width='40px'><button class='btn btn-danger' ng-click='foodController.removeRestaraunt(foodController.data.foods.indexOf(food))'>Remove</button></td>
+          <td width='40px'><button class='btn btn-danger' ng-click='removeRestaraunt(data.foods.indexOf(food))'>Remove</button></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <button class='btn btn-success btn-lg btn-block' ng-click='foodController.getRandomRestaraunt()'>Tell Me Where To Eat</button>
+  <button class='btn btn-success btn-lg btn-block' ng-click='getRandomRestaraunt()'>Tell Me Where To Eat</button>
   <div>
-    <h3>Congratulations! You are going to: {{foodController.randFood.name}}</h3>
+    <h3>Congratulations! You are going to: {{randFood.name}}</h3>
   </div>
 </div>

@@ -1,5 +1,5 @@
 var map;
-var initMap = function($scope) {
+var initMap = function() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 18
   });
