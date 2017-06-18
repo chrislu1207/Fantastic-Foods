@@ -7,10 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chrislu1207/hrsf50-mvp.git"
-  },
   "author": "Chris Lu",
   "license": "ISC",
   "bugs": {
@@ -20,8 +16,6 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "mongodb": "^2.2.12",
-    "mongoose": "^4.7.1",
     "nodemon": "^1.11.0"
   }
 }
